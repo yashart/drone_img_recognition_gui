@@ -28,8 +28,8 @@ void Recognize::calcOffset(const QString& filename1,
     } catch(...) {
 
     }
-    this->mLat -= photoInfo.offsetY * this->mHeight / 111132.0 / 1080.0 * 0.86 * 32/*!!*/; //TODO: mull on initial degrees
-    this->mLon += photoInfo.offsetX * this->mHeight / 78847.0 / 1920.0 * 3.48 * 54;
+    this->mLat -= photoInfo.offsetY * this->mHeight / 111132.0 / 1080.0 * 0.86 * 54/*!!*/; //TODO: mull on initial degrees
+    this->mLon += photoInfo.offsetX * this->mHeight / 78847.0 / 1920.0 * 3.48 * 32;
     photoInfo.offsetX = 0;
     photoInfo.offsetY = 0;
     this->mHeight = this->mHeight * sqrt(float(oldSquare)) / sqrt(float(this->photoInfo.xOnLatScaling));
